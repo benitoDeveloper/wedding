@@ -1,5 +1,4 @@
 <?php
-// session_start();
       require_once APPROOT . '/views/includes/head.php';      
 ?>
 <section id="rsvp" class="form_input bg-img">

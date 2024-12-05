@@ -28,4 +28,4 @@
     </section> 
 <?php 
       require_once APPROOT . '/views/includes/footer.php'; 
-?>
+// ?>

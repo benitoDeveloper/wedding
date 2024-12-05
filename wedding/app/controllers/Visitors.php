@@ -3,9 +3,11 @@
 class Visitors extends Controller 
 {
       protected $visitor_model;
+      protected $menu_model;
       public function __construct()
       {
             $this->visitor_model = $this->model('visitor');
+            $this->menu_model = $this->model('menu');
 
       }
       public function index() 
@@ -13,8 +15,6 @@ class Visitors extends Controller
             if($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST)) redirect('pages');
             $data = sanitise($_POST);
             set_session($data);
-
-
 
             if($this->visitor_model->is_registered($data['email']))
             {
@@ -36,7 +36,8 @@ class Visitors extends Controller
       public function menu()
       {
             if(empty($_SESSION)) redirect('pages');
-            $visitor_has_menu = $this->visitor_model->has_menu($_SESSION['visitor_id']);
+
+            $visitor_has_menu = $this->menu_model->has_menu($_SESSION['visitor_id']);
 
             if($visitor_has_menu) 
             {
@@ -44,12 +45,13 @@ class Visitors extends Controller
             } 
             else
             {
+
                   $this->view('visitors/menu',$_SESSION);
             }
       }
       public function register_menu($menu_confirmed=false)
       {
-            if($this->visitor_model->has_menu($_SESSION['visitor_id'])) $this->view('visitors/has_menu', $_SESSION);
+            if($this->menu_model->has_menu($_SESSION['visitor_id'])) $this->view('visitors/has_menu', $_SESSION);
 
             if($_SERVER['REQUEST_METHOD'] === "POST" && !empty($_POST))
             {

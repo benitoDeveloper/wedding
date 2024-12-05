@@ -14,9 +14,9 @@ function set_session($data= [],$visitor_id = 0)
 
       if($visitor_id !== 0) 
       {
-            if(isset($_SESSION['visitors_id']) || !empty($_SESSION['visitors_id'])) return;
+            if(isset($_SESSION['visitor_id']) || !empty($_SESSION['visitor_id'])) return;
             
-            $_SESSION['visitors_id'] = $visitor_id;
+            $_SESSION['visitor_id'] = $visitor_id;
 
       }
 
