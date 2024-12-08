@@ -1,6 +1,5 @@
 <?php
       require_once APPROOT . '/views/includes/head.php';
-
 ?>
       <section class="bg-section" id="menu_confirmation">
             <div class="container bg-container">

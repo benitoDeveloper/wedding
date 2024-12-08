@@ -13,7 +13,7 @@
                     <?php
                     if($data['attendance'] === 'yes_attend'){
                     ?>
-                        <a class="btn" href="<?=URLROOT?>/visitors/menu">Confirm Menu</a>
+                        <a class="btn" href="<?=URLROOT?>/menus/menu">Confirm Menu</a>
                         <a class="btn" href="<?=URLROOT?>/visitors/edit_attendance">Edit Attendance</a>
                     <?php
                     }else {

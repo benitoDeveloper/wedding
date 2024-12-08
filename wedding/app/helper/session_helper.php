@@ -11,7 +11,6 @@ function set_session($data= [],$visitor_id = 0)
                   $_SESSION[$key] = $value;
             }
       }
-
       if($visitor_id !== 0) 
       {
             if(isset($_SESSION['visitor_id']) || !empty($_SESSION['visitor_id'])) return;

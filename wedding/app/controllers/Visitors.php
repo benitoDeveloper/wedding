@@ -30,49 +30,7 @@ class Visitors extends Controller
                         $this->view('visitors/not_attend', $data); 
                         return;
                   }
-                  redirect('visitors/menu');
-            }
-      }
-      public function menu()
-      {
-            if(empty($_SESSION)) redirect('pages');
-
-            $visitor_has_menu = $this->menu_model->has_menu($_SESSION['visitor_id']);
-
-            if($visitor_has_menu) 
-            {
-                  $this->view('visitors/has_menu', $_SESSION);
-            } 
-            else
-            {
-
-                  $this->view('visitors/menu',$_SESSION);
-            }
-      }
-      public function register_menu($menu_confirmed=false)
-      {
-            if($this->menu_model->has_menu($_SESSION['visitor_id'])) $this->view('visitors/has_menu', $_SESSION);
-
-            if($_SERVER['REQUEST_METHOD'] === "POST" && !empty($_POST))
-            {
-                  set_session(sanitise($_POST));
-                  $data = $_SESSION;
-                  $this->view('visitors/menu_confirmation', $data);
-                  return;
-            } 
-            if($_SERVER['REQUEST_METHOD'] === "GET" && !empty($_GET))
-            {
-                  if($menu_confirmed)
-                  {
-                        $data = $_SESSION;
- 
-                        if($this->visitor_model->register_menu($data)=== true)
-                        {
-                              $this->view('visitors/menu_submitted', $data);
-                              return;
-                        }
-                        die("something went wrong");
-                  }
+                  redirect('menus/menu');
             }
       }
       public function edit_attendance($status = false)
@@ -98,7 +56,7 @@ class Visitors extends Controller
             }
             else 
             {
-                  flash_msg("visitor_msg", "something went wrong: your record was not updated", "danger");
+                  flash_msg("visitor_msg", "something went wrong: failed to update record", "danger");
                   redirect('visitors/existing', $_SESSION);
             }
       }

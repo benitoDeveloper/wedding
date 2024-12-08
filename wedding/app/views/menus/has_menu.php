@@ -14,6 +14,7 @@
                     if you want to make changes please contact Rachele
                 </div>
                 <div class="btn-container">
+                    <a class="btn" href="<?=URLROOT?>/menus/edit_menu/edit">Edit Menu</a>
                     <a class="btn" href="<?=URLROOT?>/pages">Home</a>
                 </div>
         </div>

@@ -1,5 +1,7 @@
 <?php
       require_once APPROOT . '/views/includes/head.php';
+    //   $status = 
+      var_dump($_SESSION);
 ?>
 <section id="food" class="form_input bg-img">
     <div class="overlay"></div>
@@ -12,7 +14,7 @@
                 <h2 class="heading">MENU</h2>
             </div>
             <div class="body">
-                <form action="<?=URLROOT?>/visitors/register_menu" method="POST">
+                <form action="<?=URLROOT?>/menus<?=isset($_SESSION['visitor_id']) && isset($_SESSION['id'])? "/edit_menu" : "/register_menu"?>" method="POST">
                         <input type="hidden" id="visitor_id" name="visitor_id" value=<?=$_SESSION['visitor_id'];?>>
                         <input type="hidden" id="first_name" name="first_name" value="<?=$_SESSION['first_name']?>">
                         <input type="hidden" id="last_name" name="last_name" value="<?=$_SESSION['last_name']?>">
