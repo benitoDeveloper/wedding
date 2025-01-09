@@ -179,7 +179,7 @@ nav .nav-link {
       height: 25vh;
 }
 #slider-section .background, #rsvp .background {
-      height: 125vh;
+      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
@@ -256,6 +256,10 @@ h3.heading3 {
       position: relative;
       padding: 48px 0;
       margin-bottom: 75px;
+      height: 100vh;
+}
+#rsvp.bg-img {
+      height: auto;
 }
 .bg-container {
       background-color: var(--ivory);
@@ -330,6 +334,7 @@ h3.heading3 {
 }
 #rsvp {
       margin-bottom: 0;
+      overflow: hidden;
 }
 #rsvp .heading {
       color: var(--black);
@@ -441,7 +446,7 @@ form .checkbox-holder .checkbox-text em {
 .slider-container {
       z-index: 4;
       position: relative;
-      height: 45em;
+      height: 100%;
       width: 100vw;
 }
 .slider-track-holder {
@@ -464,8 +469,9 @@ form .checkbox-holder .checkbox-text em {
 }
 .slide-holder img {
       width: 85vw;
-      height: 45em;
+      height: 100%;
       border-radius: 14em 14em 3px 3px;
+      object-fit: contain;
 }
 .slider-btn {
       position: absolute;
@@ -492,7 +498,7 @@ form .checkbox-holder .checkbox-text em {
       opacity: 1;
 }
 
-@media (min-width:480px) { 
+@media (min-width:480px) and (orientation:landscape){ 
 
       #invite, #login {
             background-position-y: 44%;
@@ -509,7 +515,45 @@ form .checkbox-holder .checkbox-text em {
             transform: none;
       }
 
+
 }
+@media (min-width: 768px){
+      .slide-holder img {
+            border-radius: 25em 25em 3px 3px;
+      }
+
+}
+@media (min-width: 768px) and (orientation: landscape){
+      .bg-img {
+            height: auto;
+      }
+      #intro {
+            position: relative;
+      }
+      #intro .couple-container {
+            position: static;
+      }
+      #intro img {
+            height: 35vh;
+            width: auto;
+            max-width: 16vw;
+            position: absolute;
+            top: 1vh;
+            border-radius: 5px;
+      }
+      #intro .couple-img.groom img {
+            right: 15vw;
+      }
+      #intro .couple-img.bride img {
+            left: 15vw;
+      }
+      #intro .heart {
+            font-size: 7em;
+            top: 28vh;
+      }
+}
+
+
 @media (min-width:950px) { 
       nav {
             width: 100%;

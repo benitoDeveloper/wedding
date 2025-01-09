@@ -18,7 +18,7 @@
                         We are happy to share this day with you!
                   </h3>
                   <div class="couple-container">
-                        <div class="couple-img">
+                        <div class="couple-img bride">
                               <img src="<?=URLROOT?>/public/images/TheStoryteller--54_websize.jpg" alt="picture of the bride" class="bride ">
                         </div>
                         <span class="heart">
@@ -29,6 +29,7 @@
                   </div>
             </div>
       </section>
+
       <section class="bg-img" id="slider-section">
             <!-- <div class="overlay"></div> -->
             <div class="background">
