@@ -5,7 +5,7 @@
 ?>
       <section id="invite" class="fade-in-img invite">
              <div class="background">
-                  <img class="main" src="<?=URLROOT?>/public/images/TheStoryteller--44_websize.jpg" alt="photo of the couple sitting on a rock at the beach">
+                  <img class="main" src="<?=URLROOT?>/public/images/couple-main.jpg" alt="photo of the couple sitting on a rock at the beach">
              </div>
       </section>
       <section id="intro">
