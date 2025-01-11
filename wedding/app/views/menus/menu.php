@@ -1,10 +1,11 @@
 <?php
       require_once APPROOT . '/views/includes/head.php';
-    //   $status = 
-      var_dump($_SESSION);
 ?>
 <section id="food" class="form_input bg-img">
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
+    <div class="background">
+        <img src="<?=URLROOT?>/public/images/bg-gifts.jpg" alt="">
+    </div>
     <div class="container bg-container">
         <div class="form-holder">
             <div class="head">

@@ -178,7 +178,7 @@ nav .nav-link {
 .card .img-holder {
       height: 25vh;
 }
-#slider-section .background, #rsvp .background {
+#slider-section .background, #rsvp .background, #food .background {
       height: 100%;
       position: absolute;
       top: 0;
@@ -258,7 +258,7 @@ h3.heading3 {
       margin-bottom: 75px;
       height: 100vh;
 }
-#rsvp.bg-img {
+#rsvp.bg-img, #food.bg-img {
       height: auto;
 }
 .bg-container {
