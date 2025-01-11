@@ -65,5 +65,10 @@ class Visitors extends Controller
             $data = $_SESSION;
             $this->view('visitors/existing',$data);
       }
+      public function not_attend()
+      {
+            $data = $_SESSION;
+            $this->view('visitors/not_attend',$data);
+      }
 }
 ?>

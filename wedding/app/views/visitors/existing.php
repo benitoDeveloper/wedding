@@ -8,16 +8,17 @@
                     <div class="line"></div>
                 </div>
                 <?=flash_msg('visitor_msg');?>
-                <h2 class="title">Hi <?=$data['first_name']?>, you are already registered <?=$data['attendance'] === 'not_attend'? "as not attending" : "as attending"?></h2>
+                <h2 class="title">Hi <?=$data['first_name']?>, you are registered <?=$data['attendance'] === 'not_attend'? "as not attending" : "as attending"?></h2>
                 <div class="btn-container">
                     <?php
                     if($data['attendance'] === 'yes_attend'){
                     ?>
-                        <a class="btn" href="<?=URLROOT?>/menus/menu">Confirm Menu</a>
+                        <a class="btn" href="<?=URLROOT?>/menus/menu">Select Menu</a>
                         <a class="btn" href="<?=URLROOT?>/visitors/edit_attendance">Edit Attendance</a>
                     <?php
                     }else {
                     ?>
+                        <a class="btn" href="<?=URLROOT?>/visitors/not_attend">Confirm</a>
                         <a class="btn" href="<?=URLROOT?>/visitors/edit_attendance">Edit Attendance</a>
                     <?php
                     }
