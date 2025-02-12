@@ -24,16 +24,3 @@ This project  demonstrates my skills in front-end and back-end web development, 
 ---
 
 
-## **Code Structure**
-```
-the-beceiros-forever/
-├── assets/              # CSS, JavaScript, and images
-├── database/            # SQL files for database setup
-├── includes/            # PHP files for database connection and functions
-├── login.php            # Login page
-├── register.php         # Registration page (if applicable)
-├── dashboard.php        # User dashboard (if applicable)
-├── config.php           # Database configuration
-└── README.md            # Project documentation
-```
-
